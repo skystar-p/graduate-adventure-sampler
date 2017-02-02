@@ -4,6 +4,16 @@
 
 .text-paragraph {
     font-family: 'Nanum Gothic', serif;
+    line-height: 300%;
+}
+
+.text-paragraph dt {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.text-paragraph dd {
+    margin-bottom: 15px;
 }
 
 .form-login-wrapper {
