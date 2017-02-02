@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+    <br><br><br>
+    <div class="container-fluid">
+    <div class="row content">
+        <div class="jumbotron"><h1 class="text-center text-title">mySNU 성적 샘플 수집 사이트</h1></div>
+        <div class="col-md-2 sidenav"></div>
+        <div class="col-md-8">
+            <h2>What is this?</h2> <br>
+            <blockquote class="text-paragraph">
+                서울대학교 졸업시뮬레이션의 테스트 데이터 수집을 위한 사이트입니다.<br><br>
+                수집된 데이터는 시뮬레이터의 테스트 용도 이외에는
+                <span class="text-danger">일체</span> 사용되지 않으며,<br><br>
+                수강내역을 제외한 모든 개인정보는 익명성이 보장됩니다.<br><br>
+                졸업시뮬레이션 프로젝트에 대한 자세한 내용은 <a href="https://github.com/LastOne817/graduate-adventure">이 곳</a>을 클릭하여 주십시오.
+            </blockquote> <br>
+            <h2>How to use?</h2> <br>
+            <blockquote class="text-paragraph">
+                mySNU 아이디와 비밀번호로 로그인을 하기만 하면 <b>끝!</b>
+            </blockquote><br><br><br>
+            <h2 class="text-center text-title"><b>좋아요, 한번 해보죠!</b></h2> <br>
+            <p class="text-center text-paragraph">
+                좋습니다! 그러면 아래에 있는 로그인 양식에 정보를 기입하고, 로그인을 해 주세요!
+            </p>
+            <div class="center form-login-wrapper">
+                <form class="form-login" method="post" action="/">
+                    {% csrf_token %}
+                    <h3 class="text-title text-center text-login-heading">mySNU 로그인</h3>
+                    <div class="blankbox"></div>
+                    {% if error %}
+                        <p class="text-danger text-paragraph">정확한 회원정보를 기입하여 주십시오.</p>
+                    {% endif %}
+                    <div class="blankbox"></div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" class="form-control text-input" name="username" placeholder="mySNU ID">
+                    </div>
+                    <div class="blankbox"></div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="password" class="form-control text-input" name="password" placeholder="Password">
+                    </div>
+                    <div class="blankbox"></div>
+                    <input type="submit" class="btn btn-primary" value="로그인">
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

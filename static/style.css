@@ -1,0 +1,32 @@
+.text-title {
+    font-family: 'Noto Sans KR', serif;
+}
+
+.text-paragraph {
+    font-family: 'Nanum Gothic', serif;
+}
+
+.form-login-wrapper {
+    border: 3px dotted #eaeaea;
+    background-color: #eeeeee;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.center {
+    margin: 30px auto;
+    width: 50%;
+}
+
+.blankbox {
+    margin: 20px 10px 10px 10px;
+}
+
+.thanks-heading {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.img-ok {
+    margin-bottom: 70px;
+}
