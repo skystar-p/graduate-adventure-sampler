@@ -26,6 +26,8 @@ def get_user_information(request):
     date = datetime.now().strftime('%Y%m%d%H%M%S')
     hash_object = hashlib.sha256()
     hash_object.update(username.encode())
+
+    os.makedirs(USERDATA_DIR, exist_ok=True)
     file_path = os.path.join(USERDATA_DIR, date + '_' + hash_object.hexdigest()[:6] + '.pickle')
 
     with open(file_path, 'wb') as f:
